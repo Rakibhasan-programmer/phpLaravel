@@ -1,6 +1,6 @@
 <?php
 require_once 'vendor/autoload.php';
-use App\classes\Random1;
+use App\classes\Home;
 
-$random = new Random1();
+$random = new Home();
 $random->printMessage();
