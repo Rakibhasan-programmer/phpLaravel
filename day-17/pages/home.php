@@ -1,40 +1,27 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<?php
+    include "includes/header.php";
+?>
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <?php foreach ($allProducts as $product){ ?>
+                    <div class="col-md-4 pt-4">
+                        <div class="card">
+                            <img src="<?php echo $product["image"]?>" alt="" class="card-img-top img-height">
+                            <div class="card-body">
+                                <h3><?php echo $product["name"]?></h3>
+                                <p><?php echo $product["price"]?></p>
+                                <a href="" class="btn btn-warning px-5 py-2">View</a>
+                            </div>
+                        </div>
 
-<!--    bootstrap css-->
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-<!--    external css-->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-    <header>
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-            <div class="container">
-                <a href="" class="navbar-brand">LOGO</a>
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="menu">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="action.php?page=home" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="action.php?page=about" class="nav-link">About</a></li>
-                    </ul>
-                </div>
+                    </div>
+                <?php } ?>
             </div>
-        </nav>
-    </header>
+        </div>
+    </section>
 
+<?php
+    include "includes/footer.php";
+?>
 
-
-
-<!--    bootstrap js-->
-    <script src="assets/js/bootstrap.bundle.js"></script>
-</body>
-</html>
