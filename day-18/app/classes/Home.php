@@ -4,7 +4,7 @@
 namespace App\classes;
 
 
-class Oop
+class Home
 {
 
     public function printInfo(){

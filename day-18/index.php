@@ -2,7 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-use App\classes\Oop;
+use App\classes\Home;
 
-$OOP = new Oop();
+$OOP = new Home();
 $OOP->printInfo();
