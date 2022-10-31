@@ -30,6 +30,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="action.php?page=home" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="action.php?page=full-name" class="nav-link">Full Name</a></li>
+                    <li class="nav-item"><a href="action.php?page=calculator" class="nav-link">Calculator</a></li>
                 </ul>
             </div>
         </div>
