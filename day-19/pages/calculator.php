@@ -13,13 +13,13 @@
                                 <div class="row pb-3">
                                     <label class="col-md-4">First Number</label>
                                     <div class="col-md-8">
-                                        <input required type="number" name="first_number" class="form-control" id="firstNumber" placeholder="Enter First Number">
+                                        <input  type="number" name="first_number" class="form-control" id="firstNumber" placeholder="Enter First Number">
                                     </div>
                                 </div>
                                 <div class="row pb-3">
                                     <label class="col-md-4">Second Number</label>
                                     <div class="col-md-8">
-                                        <input required type="number" name="second_number" class="form-control" id="secondNumber" placeholder="Enter Second Number">
+                                        <input  type="number" name="second_number" class="form-control" id="secondNumber" placeholder="Enter Second Number">
                                     </div>
                                 </div>
                                 <div class="row pb-3">

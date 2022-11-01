@@ -29,6 +29,8 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="action.php?page=home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="action.php?page=series" class="nav-link">Series</a></li>
+                    <li class="nav-item"><a href="action.php?page=sum" class="nav-link">Sum</a></li>
                 </ul>
             </div>
         </div>

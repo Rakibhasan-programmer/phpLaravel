@@ -20,20 +20,23 @@ class Calculator
 
     public function getResult()
     {
-        if($this->operator == '+'){
-            $this->result = $this->firstNumber + $this->secondNumber;
-        }elseif($this->operator == '-'){
-            $this->result = $this->firstNumber - $this->secondNumber;
-        }elseif($this->operator == '*'){
-            $this->result = $this->firstNumber * $this->secondNumber;
-        }elseif($this->operator == '/'){
-            $this->result = $this->firstNumber / $this->secondNumber;
-        }elseif($this->operator == '%'){
-            $this->result = $this->firstNumber % $this->secondNumber;
+        if($this->firstNumber == "" || $this->secondNumber == ""){
+            $this->result = "0";
         }else{
-            $this->result = "Invalid Operator! Try again";
+            if($this->operator == '+'){
+                $this->result = $this->firstNumber + $this->secondNumber;
+            }elseif($this->operator == '-'){
+                $this->result = $this->firstNumber - $this->secondNumber;
+            }elseif($this->operator == '*'){
+                $this->result = $this->firstNumber * $this->secondNumber;
+            }elseif($this->operator == '/'){
+                $this->result = $this->firstNumber / $this->secondNumber;
+            }elseif($this->operator == '%'){
+                $this->result = $this->firstNumber % $this->secondNumber;
+            }else{
+                $this->result = "Invalid Operator! Try again";
+            }
         }
-
         return $this->result;
     }
 
