@@ -29,6 +29,17 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="action.php?page=home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="action.php?page=add-student" class="nav-link">Add Student</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Category
+                        </a>
+                        <ul class="dropdown-menu">
+                            <?php foreach ($categories as $category) { ?>
+                            <li><a class="dropdown-item" href="#"><?php echo $category['name']; ?></a></li>
+                            <?php } ?>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
