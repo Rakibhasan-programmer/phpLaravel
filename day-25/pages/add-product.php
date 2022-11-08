@@ -11,6 +11,9 @@ include 'includes/header.php';
                             <h3 class="text-center">Add Product</h3>
                         </div>
                         <div class="card-body">
+                            <span class="text-success text-center">
+                                <?php echo isset($products) ? $products : ''; ?>
+                            </span>
                             <form action="action.php" method="POST" enctype="multipart/form-data">
                                 <div class="row mt-2">
                                     <label for="" class="col-md-4">Category Name</label>
