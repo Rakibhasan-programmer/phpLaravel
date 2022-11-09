@@ -14,9 +14,12 @@ class Product
     public $image, $imagePath;
     public $imageName, $imageDirectory, $file, $filePath, $fileContent;
 
+    public $allProducts, $products = [];
+
     public function __construct($data = null, $file = null)
     {
-        if($data){
+        if($data)
+        {
             $this->category_id = $data['category_id'];
             $this->name = $data['name'];
             $this->price = $data['price'];
@@ -40,13 +43,15 @@ class Product
         return "Data saved Succesfully";
     }
 
-    public function uploadImage(){
+    public function uploadImage()
+    {
         $this->imageName = rand(99, 9999).time().$this->image['name'];
         $this->imageDirectory = 'assets/images/upload/'.$this->imageName;
         move_uploaded_file($this->image['tmp_name'], $this->imageDirectory);
 
         return $this->imageDirectory;
     }
+
     public function getALlProduct(){
         $this->filePath = 'db/db.txt';
         $this->fileContent = file_get_contents($this->filePath);
@@ -62,6 +67,17 @@ class Product
             }
         }
         return $this->array2;
+    }
+
+    public function getCategoryWiseProduct($id)
+    {
+        $this->allProducts = $this->getALlProduct();
+        foreach ($this->allProducts as $product){
+            if($product['category_id'] == $id){
+                array_push($this->products, $product);
+            }
+        }
+        return $this->products;
     }
 
 

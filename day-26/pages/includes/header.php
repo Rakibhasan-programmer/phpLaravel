@@ -34,10 +34,12 @@
                         <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-target="drop">Categories</a>
                         <ul class="dropdown-menu">
                             <?php foreach ($categories as $category) { ?>
-                            <li><a href="" class="dropdown-item"><?php echo $category['name']; ?></a></li>
+                            <li><a href="action.php?page=category&&category_id=<?php echo $category['id']?>" class="dropdown-item"><?php echo $category['name']; ?></a></li>
                             <?php } ?>
                         </ul>
                     </li>
+                    <li class="nav-item"><a href="action.php?page=login" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="action.php?page=register" class="nav-link">Register</a></li>
                 </ul>
             </div>
         </div>

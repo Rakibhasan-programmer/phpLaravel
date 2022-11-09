@@ -2,6 +2,13 @@
     include 'includes/header.php';
 ?>
 
+    <?php
+        session_start();
+        $_SESSION['name'] = "Md Rakibul Hasan";
+        unset($_SESSION['name']);
+//        echo $_SESSION['name'];
+    ?>
+
    <section class="py-5">
        <div class="container">
            <div class="row">
@@ -15,7 +22,7 @@
                                <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Category id</th>
+                                        <th>Category Name</th>
                                         <th>Product Name</th>
                                         <th>Product Price</th>
                                         <th>Product Description</th>
@@ -27,7 +34,16 @@
                                <?php foreach ($products as $product) { ?>
                                     <tr>
                                         <td><?php echo $i++ ?></td>
-                                        <td><?php echo $product['category_id'] ?></td>
+                                        <td><?php
+                                            foreach ($categories as $category)
+                                            {
+                                                if($product['category_id'] == $category['id'])
+                                                {
+                                                    echo $category['name'];
+                                                }
+                                            }
+                                            ?>
+                                        </td>
                                         <td><?php echo $product['name'] ?></td>
                                         <td><?php echo $product['price'] ?></td>
                                         <td><?php echo $product['desc'] ?></td>

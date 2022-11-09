@@ -2,6 +2,11 @@
 include 'includes/header.php';
 ?>
 
+    <?php
+        session_start();
+        echo $_SESSION['name'];
+    ?>
+
     <section class="py-5">
         <div class="container">
             <div class="row">
