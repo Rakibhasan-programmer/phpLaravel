@@ -2,7 +2,9 @@
     include 'includes/header.php';
 ?>
 
-    <h1 class="text-center mt-5 text-uppercase text-warning">This is Home Page</h1
+    <section class="container d-flex justify-content-center align-items-center">
+        <img src="assets/images/php.png" alt="Banner" class="img-fluid w-75">
+    </section>
 
 
 <?php

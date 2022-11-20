@@ -1,12 +1,12 @@
 <?php include "includes/header.php"; ?>
 
 
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <h2 class="text-center fw-bold pb-5">All Product</h2>
-                <?php foreach ($products as $product) { ?>
-                    <div class="col-md-4 py-3">
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center fw-bold pb-5">Category Wise Product</h2>
+            <?php foreach ($products as $product) { ?>
+                <div class="col-md-4 py-3">
                     <div class="card">
                         <img src="assets/images/<?php echo $product['image'] ?>" class="card-img-top" alt="" style="height: 250px">
                         <div class="card-body">
@@ -17,13 +17,14 @@
                         </div>
                     </div>
                 </div>
-                <?php } ?>
-            </div>
+            <?php } ?>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
 
 
 <?php include "includes/footer.php"; ?>
+

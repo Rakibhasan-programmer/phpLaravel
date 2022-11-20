@@ -36,7 +36,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <?php foreach ($categories as $category) { ?>
-                                <li><a class="dropdown-item" href="#"><?php echo $category['name'] ?></a></li>
+                                <li><a class="dropdown-item" href="action.php?page=category-product&&id=<?=$category['name']?>"><?php echo $category['name'] ?></a></li>
                             <?php } ?>
                         </ul>
                     </li>
