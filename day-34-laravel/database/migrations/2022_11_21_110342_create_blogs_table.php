@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('category_id');
             $table->string('title');
-            $table->text('short-description');
-            $table->text('long-description');
+            $table->text('short_description');
+            $table->text('long_description');
             $table->text('image');
             $table->integer('hit_count')->default(0);
             $table->tinyInteger('status')->default(1);

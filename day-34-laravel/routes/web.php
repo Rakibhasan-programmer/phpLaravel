@@ -14,6 +14,7 @@ Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('ca
 Route::get('/blog/add', [BlogController::class, 'index'])->name('blog.add');
 Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');
 Route::get('/blog/manage', [BlogController::class, 'manage'])->name('blog.manage');
+Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
 
 
 

@@ -6,9 +6,9 @@
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <div class="card">
-                        <div class="card-header text-center fw-bold fs-3">BLOG Form</div>
+                        <div class="card-header text-center fw-bold fs-3">Edit Blog Information</div>
                         <div class="card-body">
-{{--                            <p class="text-center text-outline-success">{{Session['message']}}</p>--}}
+                            {{--                            <p class="text-center text-outline-success">{{Session['message']}}</p>--}}
                             <form action="{{route('blog.store')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row pb-3">
@@ -25,25 +25,26 @@
                                 <div class="row pb-3">
                                     <label for="" class="col-md-3">Blog Title</label>
                                     <div class="col-md-9">
-                                        <input type="text" placeholder="Enter Blog Title" class="form-control" name="title">
+                                        <input value="{{$blog['title']}}" type="text" placeholder="Enter Blog Title" class="form-control" name="title">
                                     </div>
                                 </div>
                                 <div class="row pb-3">
                                     <label for="" class="col-md-3">Short Description</label>
                                     <div class="col-md-9">
-                                        <textarea class="form-control" placeholder="Enter Short Description.." name="short_description" id="" rows="5"></textarea>
+                                        <textarea class="form-control" placeholder="Enter Short Description.." name="short_description" id="" rows="5">{{$blog['short_description']}}</textarea>
                                     </div>
                                 </div>
                                 <div class="row pb-3">
                                     <label for="" class="col-md-3">Long Description</label>
                                     <div class="col-md-9">
-                                        <textarea class="form-control" placeholder="Enter Long Description.." name="long_description" id="" rows="8"></textarea>
+                                        <textarea class="form-control" placeholder="Enter Long Description.." name="long_description" id="" rows="8">{{$blog['long_description']}}</textarea>
                                     </div>
                                 </div>
                                 <div class="row pb-3">
                                     <label for="" class="col-md-3">Blog Image</label>
                                     <div class="col-md-9">
                                         <input type="file" class="form-control" name="image">
+                                        <img src="{{asset('/').$blog['image']}}" alt="" height="50px" width="50px">
                                     </div>
                                 </div>
                                 <div class="row pb-3">
@@ -60,3 +61,4 @@
         </div>
     </section>
 @endsection
+
