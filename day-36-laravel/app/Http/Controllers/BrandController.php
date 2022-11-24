@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class BrandController extends Controller
 {
-    public $brands;
+    public $brands, $brand;
 
     public function index()
     {
@@ -22,6 +22,24 @@ class BrandController extends Controller
     {
         $this->brands = Brand::all();
         return view('brand.manage', ['brands' => $this->brands]);
+    }
+    // edit
+    public function edit($id)
+    {
+        $this->brand = Brand::find($id);
+        return view('brand.edit', ['brand' => $this->brand]);
+    }
+    // update
+    public function update(Request $request, $id)
+    {
+        Brand::updateBrand($request, $id);
+        return redirect('/brand/manage')->with('message', 'Data Updated Successfully');
+    }
+    // delete
+    public  function delete($id)
+    {
+        Brand::deleted($id);
+        return redirect('/brand/manage')->with('message', 'Data Deleted Successfully');
     }
 
 }

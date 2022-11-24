@@ -22,6 +22,15 @@
                     <li><a href="{{route('home')}}" class="nav-link">Home</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            Brand
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{route('brand.add')}}" class="dropdown-item">Add Brand</a></li>
+                            <li><a href="{{route('brand.manage')}}" class="dropdown-item">Manage Brand</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                             Category
                         </a>
                         <ul class="dropdown-menu">
@@ -36,15 +45,6 @@
                         <ul class="dropdown-menu">
                             <li><a href="{{route('product.add')}}" class="dropdown-item">Add Product</a></li>
                             <li><a href="{{route('product.manage')}}" class="dropdown-item">Manage Product</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            Brand
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{route('brand.add')}}" class="dropdown-item">Add Brand</a></li>
-                            <li><a href="{{route('brand.manage')}}" class="dropdown-item">Manage Brand</a></li>
                         </ul>
                     </li>
                 </ul>

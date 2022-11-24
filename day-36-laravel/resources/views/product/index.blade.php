@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <div class="card">
-                        <div class="card-header text-center fw-bold fs-3">BLOG Form</div>
+                        <div class="card-header text-center fw-bold fs-3">Add New Product</div>
                         <div class="card-body">
                             <p class="text-center text-success">{{Session::get('message')}}</p>
                             <form action="{{route('product.store')}}" method="POST" enctype="multipart/form-data">
@@ -24,7 +24,7 @@
                                     </div>
                                 </div>
                                 <div class="row pb-3">
-                                    <label for="" class="col-md-3">Blog Title</label>
+                                    <label for="" class="col-md-3">Product Title</label>
                                     <div class="col-md-9">
                                         <input type="text" placeholder="Enter Blog Title" class="form-control" name="title">
                                     </div>
@@ -36,7 +36,7 @@
                                     </div>
                                 </div>
                                 <div class="row pb-3">
-                                    <label for="" class="col-md-3">Blog Image</label>
+                                    <label for="" class="col-md-3">Product Image</label>
                                     <div class="col-md-9">
                                         <input type="file" class="form-control" name="image">
                                     </div>
@@ -44,7 +44,7 @@
                                 <div class="row pb-3">
                                     <label for="" class="col-md-3"></label>
                                     <div class="col-md-9">
-                                        <input type="submit" class="btn btn-outline-dark px-5 fw-bold" value="Create New Blog">
+                                        <input type="submit" class="btn btn-outline-dark px-5 fw-bold" value="Create New Product">
                                     </div>
                                 </div>
                             </form>

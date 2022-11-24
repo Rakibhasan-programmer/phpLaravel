@@ -30,6 +30,21 @@ class ProductController extends Controller
     public function edit($id)
     {
         $this->product = Product::find($id);
-        return view('product.edit', ['product' => $this->product]);
+        $this->categories = Category::all();
+        return view('product.edit', ['product' => $this->product, 'categories' => $this->categories]);
+    }
+
+    // update
+    public function update(Request $request, $id)
+    {
+        Product::updateProduct($request, $id);
+        return redirect('/product/manage')->with('message', 'Data Updated Successfully');
+    }
+
+    // delete
+    public function delete($id)
+    {
+        Product::deleteProduct($id);
+        return redirect('/product/manage')->with('message', 'Data Deleted Successfully');
     }
 }

@@ -28,4 +28,37 @@ class Product extends Model
         self::$product->image              = self::getImageUrl($request);
         self::$product->save();
     }
+//    public function category()
+//    {
+//        return $this->belongsTo(Category::class);
+//    }
+    // update
+    public static function updateProduct($request, $id)
+    {
+        self::$product = Product::find($id);
+        if($request->file('image'))
+        {
+            if(file_exists(self::$product->image)){
+                unlink(self::$product->image);
+            }
+            self::$imageUrl = self::getImageUrl($request);
+        }else{
+            self::$imageUrl = self::$product->image;
+        }
+        self::$product->category_id        = $request->category_id;
+        self::$product->title              = $request->title;
+        self::$product->description        = $request->description;
+        self::$product->image              = self::$imageUrl;
+        self::$product->save();
+    }
+
+    // delete
+    public static function deleteProduct($id)
+    {
+        self::$product = Product::find($id);
+        if (file_exists(self::$product->image)){
+            unlink(self::$product->image);
+        }
+        self::$product->delete();
+    }
 }

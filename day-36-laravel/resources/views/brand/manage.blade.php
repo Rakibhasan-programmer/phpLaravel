@@ -11,7 +11,7 @@
                             <h3 class="text-center">All Brands</h3>
                         </div>
                         <div class="card-body">
-{{--                            <p class="text-center text-success py-3">{{Session::get('message')}}</p>--}}
+                            <p class="text-center text-success py-3">{{Session::get('message')}}</p>
                             <table class="table table-striped table-hover table-bordered">
                                 <thead>
                                 <tr>
@@ -32,8 +32,8 @@
                                             <img src="{{asset('/').$brand->image}}" alt="" height="50px" width="50px">
                                         </td>
                                         <td>
-                                            <a href="" class="btn btn-outline-success px-4 mx-2">Edit</a>
-                                            <a href="" class="btn btn-outline-danger" onclick="confirm('Are you sure?')">Delete</a>
+                                            <a href="{{route('brand.edit', ['id' => $brand->id])}}" class="btn btn-outline-success px-4 mx-2">Edit</a>
+                                            <a href="{{route('brand.delete', ['id' => $brand->id])}}" class="btn btn-outline-danger" onclick="confirm('Are you sure?')">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach

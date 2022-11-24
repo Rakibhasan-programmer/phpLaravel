@@ -11,7 +11,7 @@
                             <h3 class="text-center">All Products</h3>
                         </div>
                         <div class="card-body">
-{{--                            <p class="text-center text-success py-3">{{Session::get('message')}}</p>--}}
+                            <p class="text-center text-success py-3">{{Session::get('message')}}</p>
                             <table class="table table-striped table-hover table-bordered">
                                 <thead>
                                 <tr>
@@ -37,7 +37,7 @@
                                         </td>
                                         <td>
                                             <a href="{{route('product.edit', ['id' => $product->id])}}" class="btn btn-outline-success px-4 mx-2">Edit</a>
-                                            <a href="" class="btn btn-outline-danger" onclick="confirm('Are you sure?')">Delete</a>
+                                            <a href="{{route('product.delete', ['id' => $product->id])}}" class="btn btn-outline-danger" onclick="confirm('Are you sure?')">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
