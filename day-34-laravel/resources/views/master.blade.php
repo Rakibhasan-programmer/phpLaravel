@@ -19,6 +19,7 @@
             </button>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
+                    @if(auth()->check())
                     <li><a href="{{route('home')}}" class="nav-link">Home</a></li>
                     <li class="dropdown">
                         <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Category</a>
@@ -36,6 +37,16 @@
                             <li><a href="{{route('blog.manage')}}" class="dropdown-item">Manage Blog</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <form action="{{route('logout')}}" method="post">
+                            @csrf
+                            <button type="submit" class="nav-link bg-transparent">Logout</button>
+                        </form>
+                    </li>
+                    @else
+                    <li><a href="{{route('login')}}" class="nav-link btn btn-success px-3 me-2">Login</a></li>
+                    <li><a href="{{route('register')}}" class="nav-link btn btn-info px-3">Register</a></li>
+                    @endif
                 </ul>
             </div>
         </div>
