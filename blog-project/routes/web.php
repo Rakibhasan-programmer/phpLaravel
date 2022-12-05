@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CategoryController;
 
 
 Route::get('/', [FrontController::class, 'home'])->name('home');
@@ -15,4 +16,6 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/add-category', [CategoryController::class, 'addCategory'])->name('add-category');
+    Route::post('/new-category', [CategoryController::class, 'newCategory'])->name('new-category');
 });

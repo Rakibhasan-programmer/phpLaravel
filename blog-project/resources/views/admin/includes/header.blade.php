@@ -51,11 +51,11 @@
                 <!-- item-->
                 <div class="dropdown-item noti-title px-3">
                     <h5 class="m-0">
-                                            <span class="float-end">
-                                                <a href="javascript: void(0);" class="text-dark">
-                                                    <small>Clear All</small>
-                                                </a>
-                                            </span>Notification
+                        <span class="float-end">
+                            <a href="javascript: void(0);" class="text-dark">
+                                <small>Clear All</small>
+                            </a>
+                        </span>Notification
                     </h5>
                 </div>
 
@@ -270,10 +270,13 @@
                 </a>
 
                 <!-- item-->
-                <a href="{{route('logout')}}" class="dropdown-item notify-item">
-                    <i class="mdi mdi-logout me-1"></i>
-                    <span>Logout</span>
-                </a>
+                <form action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <button type="submit" class="dropdown-item notify-item">
+                        <i class="mdi mdi-logout me-1"></i>
+                        <span>Logout</span>
+                    </button>
+                </form>
             </div>
         </li>
 
