@@ -49,7 +49,7 @@
                             <a href="{{route('add-category')}}">Add Category</a>
                         </li>
                         <li>
-                            <a href="">Manage Category</a>
+                            <a href="{{route('manage-category')}}">Manage Category</a>
                         </li>
                     </ul>
                 </div>

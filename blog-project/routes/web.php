@@ -18,4 +18,6 @@ Route::middleware([
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/add-category', [CategoryController::class, 'addCategory'])->name('add-category');
     Route::post('/new-category', [CategoryController::class, 'newCategory'])->name('new-category');
+    Route::get('/manage-category', [CategoryController::class, 'manageCategory'])->name('manage-category');
+    Route::get('/edit-category/{id}', [CategoryController::class, 'editCategory'])->name('edit-category');
 });
