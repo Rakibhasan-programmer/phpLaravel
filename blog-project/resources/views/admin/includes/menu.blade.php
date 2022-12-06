@@ -64,10 +64,10 @@
                 <div class="collapse" id="sidebarEcommerce">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="">Add Brand</a>
+                            <a href="{{route('add-brand')}}">Add Brand</a>
                         </li>
                         <li>
-                            <a href="">Manage Brand</a>
+                            <a href="{{route('manage-brand')}}">Manage Brand</a>
                         </li>
                     </ul>
                 </div>
