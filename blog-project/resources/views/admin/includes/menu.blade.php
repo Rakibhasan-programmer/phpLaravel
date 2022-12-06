@@ -77,13 +77,13 @@
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false" aria-controls="sidebarProjects" class="side-nav-link">
                     <i class="uil-briefcase"></i>
-                    <span class="badge rounded-pill bg-light text-dark font-10 float-end">New</span>
                     <span> Products </span>
                     <span class="menu-arrow"></span>
                 </a>
                 <div class="collapse" id="sidebarProjects">
                     <ul class="side-nav-second-level">
                         <li>
+                            <span class="badge rounded-pill bg-light text-dark font-10 float-end">New</span>
                             <a href="">Add Product</a>
                         </li>
                         <li>

@@ -13,6 +13,7 @@
                     <h3 class="text-center">Manage Categories</h3>
                 </div>
                 <div class="card-body">
+                    <p class="text-center text-success">{{Session::has('message') ? Session::get('message') : ''}}</p>
                     <table class="table table-hover table-bordered table-striped">
                         <thead>
                             <tr>
@@ -30,7 +31,7 @@
                                     <td>{{$category->status == 1 ? 'Published' : 'Unpublished'}}</td>
                                     <td>
                                         <a href="{{route('edit-category', ['id' => $category->id])}}" class="btn btn-success me-2 px-3">Edit</a>
-                                        <a href="" class="btn btn-danger me-2">Delete</a>
+                                        <a href="{{route('delete-category', ['id' => $category->id])}}" class="btn btn-danger me-2">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

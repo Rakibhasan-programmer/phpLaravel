@@ -32,4 +32,17 @@ class CategoryController extends Controller
         $this->category = Category::find($id);
         return view('admin.category.edit-category', ['category' => $this->category]);
     }
+    // update category
+    public function updateCategory(Request $request, $id)
+    {
+        Category::updateCategory($request, $id);
+        return redirect('/manage-category')->with('message', 'Category Updated Successfully');
+    }
+    // delete category
+    public function deleteCategory($id)
+    {
+        Category::removeCategory($id);
+        return redirect('/manage-category')->with('message', 'Category Deleted Successfully');
+    }
+
 }

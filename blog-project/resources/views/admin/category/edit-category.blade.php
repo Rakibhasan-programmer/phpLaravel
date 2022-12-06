@@ -14,7 +14,7 @@
                 </div>
                 <div class="card-body">
 {{--                    <p class="text-center text-success">{{Session::has('message') ? Session::get('message') : ''}}</p>--}}
-                    <form action="" method="POST">
+                    <form action="{{route('update-category', ['id' => $category->id])}}" method="POST">
                         @csrf
                         <div class="row mt-2">
                             <label for="" class="col-md-4">Category Name</label>
