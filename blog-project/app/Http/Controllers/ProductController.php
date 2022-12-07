@@ -31,4 +31,34 @@ class ProductController extends Controller
         $this->products = Product::orderBy('id', 'DESC')->get();
         return view('admin.product.manage', ['products' => $this->products]);
     }
+    // edit
+    public function editProduct($id)
+    {
+        $this->categories = Category::where('status', 1)->get();
+        $this->brands = Brand::where('status', 1)->get();
+        $this->product = Product::find($id);
+        return view('admin.product.edit', [
+            'categories' => $this->categories,
+            'brands' => $this->brands,
+            'product' => $this->product
+        ]);
+    }
+    // update product
+    public function updateProduct(Request $request, $id)
+    {
+        Product::productUpdate($request, $id);
+        return redirect('/manage-product')->with('message', 'Product data updated successfully');
+    }
+
+    // delete
+    public function deleteProduct($id)
+    {
+        $this->product = Product::find($id);
+        if(file_exists($this->product->image))
+        {
+            unlink($this->product->image);
+        }
+        $this->product->delete();
+        return redirect()->back()->with('message', 'Product deleted Successfully');
+    }
 }

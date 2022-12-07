@@ -40,8 +40,8 @@
                                 <td><img src="{{asset($product->image)}}" alt="" width="70" height="70"></td>
                                 <td>{{$product->status == 1 ? "Published" : "Unpublished"}}</td>
                                 <td class="w-50">
-                                    <a href="" class="btn btn-success px-3">Edit</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
+                                    <a href="{{route('edit-product', ['id' => $product->id])}}" class="btn btn-success px-3">Edit</a>
+                                    <a onclick="return confirm('Are You Sure?')" href="{{route('delete-product', ['id' => $product->id])}}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         @endforeach
