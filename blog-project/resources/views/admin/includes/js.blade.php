@@ -20,3 +20,9 @@
 
 <!-- Datatable Init js -->
 <script src="{{asset('/')}}admin/assets/js/pages/demo.datatable-init.js"></script>
+
+{{--ckeeditor--}}
+<script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'desc' );
+</script>

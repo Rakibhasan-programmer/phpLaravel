@@ -84,10 +84,10 @@
                     <ul class="side-nav-second-level">
                         <li>
                             <span class="badge rounded-pill bg-light text-dark font-10 float-end">New</span>
-                            <a href="">Add Product</a>
+                            <a href="{{route('add-product')}}">Add Product</a>
                         </li>
                         <li>
-                            <a href="">Manage Product</a>
+                            <a href="{{route('manage-product')}}">Manage Product</a>
                         </li>
                     </ul>
                 </div>

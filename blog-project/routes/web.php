@@ -5,7 +5,7 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
-
+use App\Http\Controllers\ProductController;
 
 Route::get('/', [FrontController::class, 'home'])->name('home');
 Route::get('/product-details', [FrontController::class, 'productDetails'])->name('product-details');
@@ -30,4 +30,9 @@ Route::middleware([
     Route::get('/edit-brand/{id}', [BrandController::class, 'editBrand'])->name('edit-brand');
     Route::post('/update-brand/{id}', [BrandController::class, 'updateBrand'])->name('update-brand');
     Route::get('/delete-brand/{id}', [BrandController::class, 'deleteBrand'])->name('delete-brand');
+
+    // product
+    Route::get('/add-product', [ProductController::class, 'addProduct'])->name('add-product');
+    Route::post('/new-product', [ProductController::class, 'newProduct'])->name('new-product');
+    Route::get('/manage-product', [ProductController::class, 'manageProduct'])->name('manage-product');
 });
