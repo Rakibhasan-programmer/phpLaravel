@@ -8,7 +8,7 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProductController;
 
 Route::get('/', [FrontController::class, 'home'])->name('home');
-Route::get('/product-details', [FrontController::class, 'productDetails'])->name('product-details');
+Route::get('/product-details/{id}', [FrontController::class, 'productDetails'])->name('product-details');
 
 
 Route::middleware([

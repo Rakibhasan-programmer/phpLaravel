@@ -13,7 +13,6 @@
                     <h3 class="text-center">Update Product</h3>
                 </div>
                 <div class="card-body">
-                    <p class="text-center text-success">{{Session::has('message') ? Session::get('message') : ''}}</p>
                     <form action="{{route('update-product', ['id' => $product->id])}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row mt-2">
