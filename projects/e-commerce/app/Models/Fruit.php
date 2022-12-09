@@ -34,4 +34,10 @@ class Fruit extends Model
         self::$fruit->save();
     }
 
+    // relationship
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
 }

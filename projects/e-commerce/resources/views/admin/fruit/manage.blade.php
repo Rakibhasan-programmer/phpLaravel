@@ -32,7 +32,7 @@
                                 @foreach($fruits as $fruit)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$fruit->category_id}}</td>
+                                        <td>{{$fruit->category->name}}</td>
                                         <td>{{$fruit->name}}</td>
                                         <td>{{$fruit->price}}</td>
                                         <td><img src="{{asset($fruit->image)}}" alt="" style="height: 70px"></td>
