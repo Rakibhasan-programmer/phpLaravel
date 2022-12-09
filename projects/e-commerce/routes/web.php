@@ -3,10 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FruitController;
+use App\Http\Controllers\FrontController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FrontController::class, 'home'])->name('home');
 
 Route::middleware([
     'auth:sanctum',
@@ -22,4 +22,9 @@ Route::middleware([
     Route::get('/edit-category/{id}', [CategoryController::class, 'editCategory'])->name('edit-category');
     Route::post('/update-category/{id}', [CategoryController::class, 'updateCategory'])->name('update-category');
     Route::get('/delete-category/{id}', [CategoryController::class, 'deleteCategory'])->name('delete-category');
+
+    // fruit
+    Route::get('/add-fruit', [FruitController::class, 'addFruit'])->name('add-fruit');
+    Route::post('/new-fruit', [FruitController::class, 'newFruit'])->name('new-fruit');
+    Route::get('/manage-fruit', [FruitController::class, 'manageFruit'])->name('manage-fruit');
 });

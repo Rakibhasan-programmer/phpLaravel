@@ -163,17 +163,17 @@
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                        <div data-i18n="Account Settings">Product</div>
+                        <div data-i18n="Account Settings">Fruits</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="" class="menu-link">
-                                <div data-i18n="Account">Add Product</div>
+                            <a href="{{route('add-fruit')}}" class="menu-link">
+                                <div data-i18n="Account">Add Fruit</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="" class="menu-link">
-                                <div data-i18n="Notifications">Manage Product</div>
+                            <a href="{{route('manage-fruit')}}" class="menu-link">
+                                <div data-i18n="Notifications">Manage Fruit</div>
                             </a>
                         </li>
                     </ul>
@@ -277,10 +277,13 @@
                                     <div class="dropdown-divider"></div>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="auth-login-basic.html">
-                                        <i class="bx bx-power-off me-2"></i>
-                                        <span class="align-middle">Log Out</span>
-                                    </a>
+                                    <form action="{{route('logout')}}" method="POST">
+                                        @csrf
+                                        <a class="dropdown-item" href="">
+                                            <i class="bx bx-power-off me-2"></i>
+                                            <button type="submit" class="align-middle btn">Log Out</button>
+                                        </a>
+                                    </form>
                                 </li>
                             </ul>
                         </li>
