@@ -2,16 +2,26 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductController;
 
 
-Route::get('/', [FrontController::class, 'home']);
+Route::get('/', [FrontController::class, 'home'])->name('home');
+Route::get('/details/{id}', [FrontController::class, 'details'])->name('details');
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+
+    // product
+    Route::get('/add-product', [ProductController::class, 'addProduct'])->name('add-product');
+    Route::post('/new-product', [ProductController::class, 'newProduct'])->name('new-product');
+    Route::get('/manage-product', [ProductController::class, 'manageProduct'])->name('manage-product');
+    Route::get('/edit-product/{id}', [ProductController::class, 'editProduct'])->name('edit-product');
+    Route::post('/update-product/{id}', [ProductController::class, 'updateProduct'])->name('update-product');
+    Route::get('/delete-product/{id}', [ProductController::class, 'deleteProduct'])->name('delete-product');
+
 });
