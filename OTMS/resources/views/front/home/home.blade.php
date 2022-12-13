@@ -4,6 +4,7 @@
     Home
 @endsection
 
+
 @section('body')
     <section>
         <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -14,7 +15,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="{{asset('/')}}front/images/program.png" class="d-block" style="height: 90vh" alt="Course title">
+                    <img src="{{asset('/')}}front/images/next.png" class="d-block" style="height: 90vh" alt="Course title">
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
                     <img src="{{asset('/')}}front/images/flutter.png" class="d-block w-100" style="height: 90vh" alt="Course title">
@@ -45,9 +46,11 @@
                             <div class="card">
                                 <img src="{{asset('/')}}front/images/php.png" alt="" class="w-100" style="height: 250px">
                                 <div class="card-body">
-                                    <h4 class="card-title">Php Laravel</h4>
-                                    <p>Price: 25000tk</p>
-                                    <p>total hour: 200hours</p>
+                                    <h4 class="card-title pb-3">Php Laravel</h4>
+                                    <p class="d-flex justify-content-between">
+                                        <span>Price: 25000tk</span>
+                                        <span>total hour: 200hours</span>
+                                    </p>
                                 </div>
                                 <div class="card-footer">
                                     <a href="" class="btn btn-outline-success float-end">Enroll Now</a>
@@ -58,9 +61,11 @@
                             <div class="card">
                                 <img src="{{asset('/')}}front/images/php.png" alt="" class="w-100" style="height: 250px">
                                 <div class="card-body">
-                                    <h4 class="card-title">Php Laravel</h4>
-                                    <p>Price: 25000tk</p>
-                                    <p>total hour: 200hours</p>
+                                    <h4 class="card-title pb-3">Php Laravel</h4>
+                                    <p class="d-flex justify-content-between">
+                                        <span>Price: 25000tk</span>
+                                        <span>total hour: 200hours</span>
+                                    </p>
                                 </div>
                                 <div class="card-footer">
                                     <a href="" class="btn btn-outline-success float-end">Enroll Now</a>
@@ -71,9 +76,11 @@
                             <div class="card">
                                 <img src="{{asset('/')}}front/images/php.png" alt="" class="w-100" style="height: 250px">
                                 <div class="card-body">
-                                    <h4 class="card-title">Php Laravel</h4>
-                                    <p>Price: 25000tk</p>
-                                    <p>total hour: 200hours</p>
+                                    <h4 class="card-title pb-3">Php Laravel</h4>
+                                    <p class="d-flex justify-content-between">
+                                        <span>Price: 25000tk</span>
+                                        <span>total hour: 200hours</span>
+                                    </p>
                                 </div>
                                 <div class="card-footer">
                                     <a href="" class="btn btn-outline-success float-end">Enroll Now</a>

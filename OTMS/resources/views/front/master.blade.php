@@ -8,6 +8,7 @@
     <title>OTMS | @yield('title')</title>
 
     <link rel="stylesheet" href="{{asset('/')}}front/css/bootstrap.css">
+    <link rel="stylesheet" href="{{asset('front/css/style.css')}}">
 </head>
 <body>
 
