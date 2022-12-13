@@ -14,7 +14,7 @@ class CourseCategoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.courseCategory.index');
     }
 
     /**

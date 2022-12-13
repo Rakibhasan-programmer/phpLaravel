@@ -46,7 +46,7 @@
                 <div class="collapse" id="sidebarEcommerce">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="">Course Category</a>
+                            <a href="{{route('course-categories.index')}}">Course Category</a>
                         </li>
                         <li>
                             <a href="">Course Sub Category</a>
