@@ -6,6 +6,6 @@
 
 @section('admin_content')
     <div class="row">
-        <h1>Course Module</h1>
+        <h1>Course Modules</h1>
     </div>
 @endsection
