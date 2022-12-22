@@ -1,1 +1,1 @@
-# php with laravel fremework whole journey (BITM)
+# php with laravel fremework journey (BITM)
