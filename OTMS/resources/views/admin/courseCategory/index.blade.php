@@ -7,5 +7,6 @@
 @section('admin_content')
     <div class="row">
         <h1>Course Modules</h1>
+
     </div>
 @endsection
