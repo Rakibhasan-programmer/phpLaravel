@@ -60,30 +60,36 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-header">
-                            <h2 class="text-center">Manage Student</h2>
+                        <div class="card-header bg-dark">
+                            <h2 class="text-center text-white">Manage Student</h2>
                         </div>
                         <div class="card-body">
+                            <p class="text-center text-success">{{Session::get('update')}}</p>
                             <table class="table table-hover table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <td>ID</td>
-                                        <td>Name</td>
-                                        <td>City</td>
-                                        <td>Subject</td>
-                                        <td>CGPA</td>
-                                        <td>Action</td>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>City</th>
+                                        <th>Subject</th>
+                                        <th>CGPA</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>ID</td>
-                                    <td>Name</td>
-                                    <td>City</td>
-                                    <td>Subject</td>
-                                    <td>CGPA</td>
-                                    <td>Action</td>
-                                </tr>
+                                    @foreach($students as $student)
+                                        <tr>
+                                            <td>{{$loop->iteration}}</td>
+                                            <td>{{$student->name}}</td>
+                                            <td>{{$student->city}}</td>
+                                            <td>{{$student->subject}}</td>
+                                            <td>{{$student->cgpa}}</td>
+                                            <td>
+                                                <a href="{{route('edit', ['id' => $student->id])}}" class="px-3 btn btn-outline-success">Edit</a>
+                                                <a href="{{route('delete', ['id' => $student->id])}}" class="btn btn-outline-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

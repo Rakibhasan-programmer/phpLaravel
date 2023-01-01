@@ -20,4 +20,14 @@ class Student extends Model
         self::$student->cgpa = $req->cgpa;
         self::$student->save();
     }
+
+    public static function updateStudent($req, $id)
+    {
+        self::$student = Student::find($id);
+        self::$student->name = $req->name;
+        self::$student->city = $req->city;
+        self::$student->subject = $req->subject;
+        self::$student->cgpa = $req->cgpa;
+        self::$student->save();
+    }
 }
