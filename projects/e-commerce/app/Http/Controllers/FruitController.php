@@ -12,7 +12,7 @@ class FruitController extends Controller
 
     public function addFruit()
     {
-        $this->category = Category::all();
+        $this->category = Category::where('status', '=', 1)->get();
         return view('admin.fruit.add', ['categories' => $this->category]);
     }
     // create

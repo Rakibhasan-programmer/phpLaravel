@@ -7,7 +7,7 @@
     <meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
     <!-- title -->
-    <title>Fruitkha</title>
+    <title>Smart Shop</title>
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="{{asset('/')}}front/assets/img/favicon.png">
@@ -50,8 +50,9 @@
                 <div class="main-menu-wrap">
                     <!-- logo -->
                     <div class="site-logo">
-                        <a href="index.html">
-                            <img src="{{asset('/')}}front/assets/img/logo.png" alt="">
+                        <a  href="index.html" >
+                            <h3 class="text-white fw-bold text-decoration-none">SmartShop</h3>
+{{--                            <img src="{{asset('/')}}front/assets/img/logo.png" alt="">--}}
                         </a>
                     </div>
                     <!-- logo -->
@@ -66,32 +67,8 @@
                                 </ul>
                             </li>
                             <li><a href="about.html">About</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="sub-menu">
-                                    <li><a href="404.html">404 page</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="checkout.html">Check Out</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="shop.html">Shop</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="news.html">News</a>
-                                <ul class="sub-menu">
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="single-news.html">Single News</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="news.html">News</a></li>
                             <li><a href="contact.html">Contact</a></li>
-                            <li><a href="shop.html">Shop</a>
-                                <ul class="sub-menu">
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="checkout.html">Check Out</a></li>
-                                    <li><a href="single-product.html">Single Product</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                </ul>
-                            </li>
                             <li><a href="{{route('login')}}">Login</a></li>
                             <li><a href="{{route('register')}}">Register</a></li>
                             <li>
@@ -298,7 +275,7 @@
             <div class="col-lg-6 col-md-12">
                 <div class="abt-text">
                     <p class="top-sub">Since Year 1999</p>
-                    <h2>We are <span class="orange-text">Fruitkha</span></h2>
+                    <h2>Something About <span class="orange-text">SmartShaop</span></h2>
                     <p>Etiam vulputate ut augue vel sodales. In sollicitudin neque et massa porttitor vestibulum ac vel nisi. Vestibulum placerat eget dolor sit amet posuere. In ut dolor aliquet, aliquet sapien sed, interdum velit. Nam eu molestie lorem.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis illo repellat veritatis minus, et labore minima mollitia qui ducimus.</p>
                     <a href="about.html" class="boxed-btn mt-4">know more</a>
@@ -428,7 +405,7 @@
                     <h2 class="widget-title">Get in Touch</h2>
                     <ul>
                         <li>34/8, East Hukupara, Gifirtok, Sadan.</li>
-                        <li>support@fruitkha.com</li>
+                        <li>support@smartshop.com</li>
                         <li>+00 111 222 3333</li>
                     </ul>
                 </div>
@@ -465,7 +442,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12">
-                <p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.</p>
+                <p>Copyrights &copy; 2023,  All Rights Reserved.</p>
             </div>
             <div class="col-lg-6 text-right col-md-12">
                 <div class="social-icons">

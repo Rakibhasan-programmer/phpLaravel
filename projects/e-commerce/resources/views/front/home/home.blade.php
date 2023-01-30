@@ -16,11 +16,11 @@
             <div class="row">
                @foreach($fruits as $fruit)
                     <div class="col-md-4 py-3">
-                        <div class="card">
-                            <img src="{{asset($fruit->image)}}" alt="" class="img-top">
+                        <div class="card" style="width: 24rem;">
+                            <div><img src="{{asset($fruit->image)}}" alt="" class="img-top img-fluid"></div>
                             <div class="card-body">
                                 <h3 class="card-title">{{$fruit->name}}</h3>
-                                <p class="card-details">{{$fruit->price}}</p>
+                                <p class="card-details">${{$fruit->price}}</p>
                                 <p class="card-details">{{\Illuminate\Support\Str::words($fruit->description, 5, '...')}}</p>
                                 <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
                             </div>

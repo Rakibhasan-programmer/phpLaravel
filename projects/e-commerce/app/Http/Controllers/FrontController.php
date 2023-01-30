@@ -11,7 +11,7 @@ class FrontController extends Controller
 
     public function home()
     {
-        $this->fruits = Fruit::orderBy('id', 'DESC')->get();
+        $this->fruits = Fruit::where('status', '=', 1)->get();
         return view('front.home.home', ['fruits' => $this->fruits]);
     }
 }
