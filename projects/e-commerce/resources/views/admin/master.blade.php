@@ -14,7 +14,7 @@
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Sneat | @yield('title')</title>
+    <title>SmartShop | @yield('title')</title>
 
     <meta name="description" content="" />
 
@@ -116,7 +116,7 @@
                   </g>
                 </svg>
               </span>
-                    <span class="app-brand-text demo menu-text fw-bolder ms-2">Sneat</span>
+                    <span class="app-brand-text demo menu-text fw-bolder ms-2">SmartShop</span>
                 </a>
 
                 <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -266,7 +266,7 @@
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
+                                        <span class="d-flex align-items-center align-middle">
                           <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
                           <span class="flex-grow-1 align-middle">Billing</span>
                           <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
