@@ -14,7 +14,7 @@
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Register Basic - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Register</title>
 
     <meta name="description" content="" />
 
@@ -156,6 +156,20 @@
                                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                             </div>
                         </div>
+                        <div class="mb-3 form-password-toggle">
+                            <label class="form-label" for="password">Confirm Password</label>
+                            <div class="input-group input-group-merge">
+                                <input
+                                    type="password"
+                                    id="password"
+                                    class="form-control"
+                                    name="password_confirmation"
+                                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                    aria-describedby="password"
+                                />
+                                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                            </div>
+                        </div>
 
                         <div class="mb-3">
                             <div class="form-check">
@@ -182,16 +196,6 @@
     </div>
 </div>
 
-<!-- / Content -->
-
-<div class="buy-now">
-    <a
-        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-    >Upgrade to Pro</a
-    >
-</div>
 
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->

@@ -23,6 +23,7 @@
                                 <p class="card-details">${{$fruit->price}}</p>
                                 <p class="card-details">{{\Illuminate\Support\Str::words($fruit->description, 5, '...')}}</p>
                                 <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                                <a href="{{route('details', ['id' => $fruit->id])}}" class="cart-btn"><i class="fas fa-shopping-cart"></i>Details</a>
                             </div>
                         </div>
                     </div>

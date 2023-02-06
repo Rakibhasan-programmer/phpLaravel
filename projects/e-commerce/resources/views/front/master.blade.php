@@ -50,7 +50,7 @@
                 <div class="main-menu-wrap">
                     <!-- logo -->
                     <div class="site-logo">
-                        <a  href="index.html" >
+                        <a  href="{{route('home')}}" >
                             <h3 class="text-white fw-bold text-decoration-none">SmartShop</h3>
 {{--                            <img src="{{asset('/')}}front/assets/img/logo.png" alt="">--}}
                         </a>
@@ -60,12 +60,7 @@
                     <!-- menu start -->
                     <nav class="main-menu">
                         <ul>
-                            <li class="current-list-item"><a href="#">Home</a>
-                                <ul class="sub-menu">
-                                    <li><a href="index.html">Static Home</a></li>
-                                    <li><a href="index_2.html">Slider Home</a></li>
-                                </ul>
-                            </li>
+                            <li class="current-list-item"><a href="#">Home</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="news.html">News</a></li>
                             <li><a href="contact.html">Contact</a></li>

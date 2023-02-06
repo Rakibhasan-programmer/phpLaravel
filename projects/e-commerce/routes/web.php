@@ -7,6 +7,7 @@ use App\Http\Controllers\FruitController;
 use App\Http\Controllers\FrontController;
 
 Route::get('/', [FrontController::class, 'home'])->name('home');
+Route::get('/details/{id}', [FrontController::class, 'details'])->name('details');
 
 Route::middleware([
     'auth:sanctum',
